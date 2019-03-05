@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+.quickaddform{
+display:none;
+}
+
+body{
+
+  background-size: cover;
+  height: 100%;
+  
+   background-image: url("https://images.unsplash.com/photo-1470790376778-a9fbc86d70e2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
+}h2{
+     color: #826922;
+    text-shadow: -1px -1px 1px #000, 1px 1px 1px #ccc;
+}
+button{
+	background-color: #555555;
+	font-size: 20px;
+	border-radius: 12px;
+	padding: 10px;
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: right;
+}
+</style>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Phone Directory</a>
+    </div>
+</nav>
+
+
+<button id="add">ADD Subscriber</button><br><br>
+
+<div class="quickaddform" id="quickaddform">
+<form  action="add.php" method="post">
+	<h3>NAME:<h3><input type="text" name="name"><br><br>
+	<h3>Phone:</h3><input type="text" name="phone"><br></br>
+	<input type="submit" value="ADD"><br>
+	 </form>
+	<button id="cancel">CANCEL</button><br><br><br>
+
+</div>
+<a href="display.php"><button id="display">Display list</button></a><br><br>
+
+<a href="delete.html"><button >Delete Specific Subscriber</button><br><br>
+<a href="clear.php"><button> Clear Directory</button>	
+	
+	
+	
+	
+	
+	
+<script>
+var x = document.getElementById("add");
+var cancel=document.getElementById("cancel");
+x.addEventListener("click", showForm);
+var form=document.getElementById("quickaddform");
+cancel.addEventListener("click",hideForm);
+function showForm() {
+  form.style.display='block';
+ 
+}
+
+function hideForm() {
+  form.style.display='none';
+}
+</script>
+
+ <div class="footer">
+  <p>Vaishnavi Mundhe(m.vaishnavis03@gmail.com)</p>
+</div>
+</body>
+</html>
